@@ -1,7 +1,7 @@
-# GPU Passthrough
+## GPU Passthrough
 - Need to properly passthrough the graphics card to the Windows VM.  
 - It seems in previous attempts, although the card was detected by Windows, I doubt it was working.
-## Update
+### Update
 In terms of isolating the dGPU, it seems the method followed in this tutorial didn't work:
 - At 3:29 - https://youtu.be/g--fe8_kEcw?si=vEyhYgP-NS1mZdek&t=3m29s  
 - Might need to undo what's done in ```/etc/modprobe.d/vfio.conf```.  
