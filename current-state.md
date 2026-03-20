@@ -1,4 +1,4 @@
-# Passthrough
+# GPU Passthrough
 - Need to properly passthrough the graphics card.  
 - It seems in previous attempts, although the card was detected by windows, i doubt it was working.
 ## Update
