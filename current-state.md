@@ -1,17 +1,17 @@
 # GPU Passthrough
-- Need to properly passthrough the graphics card.  
-- It seems in previous attempts, although the card was detected by windows, i doubt it was working.
+- Need to properly passthrough the graphics card to the Windows VM.  
+- It seems in previous attempts, although the card was detected by Windows, I doubt it was working.
 ## Update
 In terms of isolating the dGPU, it seems the method followed in this tutorial didn't work:
-- At 3:29 \- https://youtu.be/g--fe8\_kEcw?si=vEyhYgP-NS1mZdek\&t=3m29s  
+- At 3:29 - https://youtu.be/g--fe8_kEcw?si=vEyhYgP-NS1mZdek&t=3m29s  
 - Might need to undo what's done in ```/etc/modprobe.d/vfio.conf```.  
   *and*  
-- Reverse what's done with this command ```sudo update-initramfs \-c \-k $(uname \-r)```. **(See NOTE below).**
+- Reverse what's done with this command ```sudo update-initramfs -c -k $(uname -r)```. **(See NOTE below).**
 
 *then*
 
-Follow the steps in this tutorial \- https://passthroughpo.st/gpu-debian/  
-Since the command ```lspci \-k``` revealed **nouveau drivers** were used **instead of** the proprietary **Nvidia drivers**, there are two ways to go about this:
+Follow the steps in this tutorial - https://passthroughpo.st/gpu-debian/  
+Since the command ```lspci -k``` revealed **nouveau drivers** were used **instead of** the proprietary **Nvidia drivers**, there are two ways to go about this:
 - Follow this tutorial instead of the above, focusing on **blacklisting nouveau drivers**.
 
   *or*
