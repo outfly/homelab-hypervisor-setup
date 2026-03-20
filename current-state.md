@@ -16,7 +16,7 @@ Since the command ```lspci -k``` revealed **nouveau drivers** were used **instea
 
   *or*
 
-- Replace the open source nouveau drivers with the proprietary Nvidia ones and retry the above method. When **ChatGPT** was asked, he had a solution.
-> **NOTE:** Ask chatgpt about ```update-initramfs``` command. In my first try, he suggested using the ```-u``` flag while the tutorial is (and I followed) using ```-c \-k```. Additionally, it seems, from my that with him, deleting the ```vfio.conf``` file and rerunning ```update-initramfs``` reverses the actions *(THIS COULD SORT OUT THE FIRST ISSUE MENTIONED ABOVE)*.
+- Replace the open source nouveau drivers with the proprietary Nvidia ones and retry the above method. When ChatGPT was asked, he had a solution.
+> **NOTE:** Ask ChatGPT about ```update-initramfs``` command. In my first try, it suggested using the ```-u``` flag while, the tutorial is (and I followed) using ```-c -k```. Additionally, it seems, from my chat with it, deleting the ```vfio.conf``` file and rerunning ```update-initramfs``` reverses the actions *(THIS COULD SORT OUT THE FIRST ISSUE MENTIONED ABOVE)*.
 ## Looking-Glass
 In terms of Looking Glass setup, this is where I stopped - https://looking-glass.io/docs/B7/install_host/
